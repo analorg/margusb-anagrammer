@@ -38,7 +38,7 @@ def get_cache_filename(filename):
 
 
 def get_cache_loc(filename):
-    return os.path.join(os.path.dirname(os.path.abspath(__file__)),filename+'.pkl') 
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cache', filename+'.pkl') 
 
 
 def encode_anagrams_cache(word_list, cache_file, recache = False):
