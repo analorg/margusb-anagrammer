@@ -4,7 +4,7 @@
 # Python related files
 *.pkl
 *.pyproj
-
+*.sln
 
 # Data
 data/*
