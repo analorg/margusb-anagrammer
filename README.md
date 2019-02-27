@@ -12,7 +12,7 @@ You need to have:
 Download latest build
 
 ```
-$ git clone https://github.com/margusb/nlp.git Anagrammer
+$ git clone https://github.com/margusb/anagrammer.git
 ```
 
 Make script executable
