@@ -7,6 +7,7 @@ import os
 from collections import defaultdict
 
 
+
 def read_dictionary_file(filepath):
     try:
         with open(filepath,'rb') as f:
@@ -58,8 +59,6 @@ def encode_anagrams_cache(word_list, cache_file, recache = False):
             enc = pickle.load(f)
     except:    
            enc = encode_anagrams(word_list)
-           #enc = defaultdict() #fallback
-    #print(enc)
     return enc
 
 
@@ -122,7 +121,6 @@ def main(argv=None):
         res = str(delta.microseconds) + ',' + ','.join(anagrams)
  
     print(res)
-    #sys.stdout.write(anagram_res)
 
 if __name__ == "__main__": 
     main(sys.argv[1:])
