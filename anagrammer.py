@@ -81,32 +81,19 @@ def find_anacrams_inverted(word, encoded_dict):
 def anagrammer(filepath, word):
     contents = read_dictionary_file(filepath)
     
-    # Live transformations (k,v => k, encode(v))
-    #dict_encoded_anagram = encode_anagrams(contents)
-    #anagrams = find_anacrams(word, dict_encoded_anagram)
-
-    # Live transformations (k,v => encode(v),[k])
-    #dict_encoded_anagram = encode_anagrams_inverted(contents)
-    #anagrams = find_anacrams_inverted(word, dict_encoded_anagram)
-
-    # Cached transformations
     cache_filename = get_cache_filename(filepath)
     cache_file = get_cache_loc(cache_filename)
     dict_encoded_anagram = encode_anagrams_cache(contents, cache_file, recache = False)
     anagrams = find_anacrams(word, dict_encoded_anagram)
      
-    #if word in anagrams:
-    #    anagrams.remove(word)
+    if word in anagrams:
+        anagrams.remove(word)
     return anagrams
     
 
 def main(argv=None):
     res = ''
     start = datetime.datetime.now()
-
-    filepath = 'data/lemmad.txt'
-    #filepath = 'data/google-10000-english.txt'
-    word = 'test'
     
     if len(argv) >= 2:
         filepath = argv[0] or ''
