@@ -19,10 +19,9 @@ You need to have:
  ```
  $ sudo apt install wget
  ```
+ <br>
+ <br>
  
-
-
-
 Check Python version:
 ```
 $ python3 --version
@@ -35,25 +34,30 @@ Check Wget version:
 ```
 $ wget --version
 ```
+<br>
+<br>
 
-
-
-Download latest Anagremmer build
-
+## Download latest Anagrammer build
 ```
 $ git clone https://github.com/margusb/anagrammer.git
 ```
+<br>
+<br>
 
-Make script executable
+## Make script executable
 ```
 $ cd anagrammer/
 $ chmod a+x anagrammer.py
 ```
+<br>
+<br>
 
 ## Download Datasets
 ```
 $ wget -P data https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english.txt 
 ```
+<br>
+<br>
 
 ## Usage
 
