@@ -20,7 +20,6 @@ You need to have:
  $ sudo apt install wget
  ```
  <br>
- <br>
  
 Check Python version:
 ```
@@ -35,13 +34,11 @@ Check Wget version:
 $ wget --version
 ```
 <br>
-<br>
 
 ## Download latest Anagrammer build
 ```
 $ git clone https://github.com/margusb/anagrammer.git
 ```
-<br>
 <br>
 
 ## Make script executable
@@ -49,7 +46,6 @@ $ git clone https://github.com/margusb/anagrammer.git
 $ cd anagrammer/
 $ chmod a+x anagrammer.py
 ```
-<br>
 <br>
 
 ## Download Datasets
@@ -87,19 +83,22 @@ word = 'test'
 3. Find anagrams
 
   - Cached anagrams:    
+```
 anagram_words = an.anagrammer(filepath, word)
 print('Anagrams for', word ,'is:', ', '.join(anagram_words))
-
+```
   - Not cached anagrams:    
+```
 contents = an.read_dictionary_file(filepath)
 dict_encoded_anagram = an.encode_anagrams(contents)
 anagram_words = an.find_anacrams(word, dict_encoded_anagram)
 print('Anagrams for', word ,'is:', ', '.join(anagram_words))
-
+```
   - Not cached inversed dictionary anagrams:    
+```
 contents = an.read_dictionary_file(filepath)
 dict_encoded_anagram = an.encode_anagrams_inverted(contents)
 anagram_words = an.find_anacrams_inverted(word, dict_encoded_anagram)
 print('Anagrams for', word ,'is:', ', '.join(anagram_words))
-
+```
 
