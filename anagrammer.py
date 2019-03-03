@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import datetime
 import sys
@@ -86,13 +86,15 @@ def anagrammer(filepath, word):
     dict_encoded_anagram = encode_anagrams_cache(contents, cache_file, recache = False)
     anagrams = find_anacrams(word, dict_encoded_anagram)
      
-    if word in anagrams:
-        anagrams.remove(word)
+    #if word in anagrams:
+    #    anagrams.remove(word)
     return anagrams
     
 
 def main(argv=None):
     res = ''
+    filepath = ''
+    word = ''
     start = datetime.datetime.now()
     
     if len(argv) >= 2:
