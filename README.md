@@ -86,19 +86,17 @@ word = 'test'
 ```
 3. Find anagrams
 
-Cached anagrams:    
+  - Cached anagrams:    
 anagram_words = an.anagrammer(filepath, word)
 print('Anagrams for', word ,'is:', ', '.join(anagram_words))
 
-<br>
-Not cached anagrams:    
+  - Not cached anagrams:    
 contents = an.read_dictionary_file(filepath)
 dict_encoded_anagram = an.encode_anagrams(contents)
 anagram_words = an.find_anacrams(word, dict_encoded_anagram)
 print('Anagrams for', word ,'is:', ', '.join(anagram_words))
 
-<br>
-Not cached inversed dictionary anagrams:    
+  - Not cached inversed dictionary anagrams:    
 contents = an.read_dictionary_file(filepath)
 dict_encoded_anagram = an.encode_anagrams_inverted(contents)
 anagram_words = an.find_anacrams_inverted(word, dict_encoded_anagram)
