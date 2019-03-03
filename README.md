@@ -57,9 +57,8 @@ $ chmod a+x anagrammer.py
 $ wget -P data https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english.txt 
 ```
 <br>
-<br>
 
-## Usage
+## Usage by shell
 
 ```
 anagrammer.py {path} {word}
@@ -73,3 +72,40 @@ The above example would output:
 duration,list,of,anagrams,found
 10279,add,dad
 ```
+<br>
+
+## Usage by import
+
+1. Import reference to anagrammer
+```
+import anagrammer as an
+```
+<br>
+2. Set main variables
+```
+filepath = 'data/google-10000-english.txt'
+word = 'test'
+```
+<br>
+3. Find anagrams
+
+<br>
+Cached anagrams:    
+anagram_words = an.anagrammer(filepath, word)
+print('Anagrams for', word ,'is:', ', '.join(anagram_words))
+
+<br>
+Not cached anagrams:    
+contents = an.read_dictionary_file(filepath)
+dict_encoded_anagram = an.encode_anagrams(contents)
+anagram_words = an.find_anacrams(word, dict_encoded_anagram)
+print('Anagrams for', word ,'is:', ', '.join(anagram_words))
+
+<br>
+Not cached inversed dictionary anagrams:    
+contents = an.read_dictionary_file(filepath)
+dict_encoded_anagram = an.encode_anagrams_inverted(contents)
+anagram_words = an.find_anacrams_inverted(word, dict_encoded_anagram)
+print('Anagrams for', word ,'is:', ', '.join(anagram_words))
+
+
