@@ -9,12 +9,19 @@ Multi-word anagram solver
 You need to have:
  - python3 
  ``` 
- sudo apt install python3
+ $ sudo apt install python3
  ```
  - git 
  ```
- sudo apt install git
+ $ sudo apt install git
  ```
+ - wget 
+ ```
+ $ sudo apt install wget
+ ```
+ 
+
+
 
 Check Python version:
 ```
@@ -22,7 +29,11 @@ $ python3 --version
 ```
 Check Git version:
 ```
-git --version
+$ git --version
+```
+Check Wget version:
+```
+$ wget --version
 ```
 
 
@@ -35,14 +46,20 @@ $ git clone https://github.com/margusb/anagrammer.git
 
 Make script executable
 ```
+$ cd anagrammer/
 $ chmod a+x anagrammer.py
+```
+
+## Download Datasets
+```
+$ wget -P data https://github.com/first20hours/google-10000-english/blob/master/google-10000-english.txt 
 ```
 
 ## Usage
 
 ```
 anagrammer {path} {word}
-$ python anagrammer /path/to/dictionary/file test
+$ python3 anagrammer.py data/google-10000-english.txt test
 ```
 
 The above example would output:
