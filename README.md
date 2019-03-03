@@ -62,8 +62,10 @@ $ wget -P data https://raw.githubusercontent.com/first20hours/google-10000-engli
 ## Usage
 
 ```
-anagrammer {path} {word}
+anagrammer.py {path} {word}
 $ python3 anagrammer.py data/google-10000-english.txt add
+or
+$ ./anagrammer.py data/google-10000-english.txt add
 ```
 
 The above example would output:
