@@ -59,11 +59,11 @@ $ wget -P data https://raw.githubusercontent.com/first20hours/google-10000-engli
 
 ```
 anagrammer {path} {word}
-$ python3 anagrammer.py data/google-10000-english.txt test
+$ python3 anagrammer.py data/google-10000-english.txt add
 ```
 
 The above example would output:
 ```
 duration,list,of,anagrams,found
-86744,sett,test,tste
+10279,add,dad
 ```
