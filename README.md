@@ -52,7 +52,7 @@ $ chmod a+x anagrammer.py
 
 ## Download Datasets
 ```
-$ wget -P data https://github.com/first20hours/google-10000-english/blob/master/google-10000-english.txt 
+$ wget -P data https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english.txt 
 ```
 
 ## Usage
