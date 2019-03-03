@@ -2,14 +2,32 @@
 
 Multi-word anagram solver
 
-## Installation / linux (Ubuntu)
+## Installing Prerequisites
+
+### linux (Ubuntu 14.04)
 
 You need to have:
- - python3
- - git
+ - python3 
+ ``` 
+ sudo apt install python3
+ ```
+ - git 
+ ```
+ sudo apt install git
+ ```
+
+Check Python version:
+```
+$ python3 --version
+```
+Check Git version:
+```
+git --version
+```
 
 
-Download latest build
+
+Download latest Anagremmer build
 
 ```
 $ git clone https://github.com/margusb/anagrammer.git
