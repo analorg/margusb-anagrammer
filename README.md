@@ -59,7 +59,6 @@ $ wget -P data https://raw.githubusercontent.com/first20hours/google-10000-engli
 <br>
 
 ## Usage by shell
-
 ```
 anagrammer.py {path} {word}
 $ python3 anagrammer.py data/google-10000-english.txt add
@@ -80,16 +79,13 @@ duration,list,of,anagrams,found
 ```
 import anagrammer as an
 ```
-<br>
 2. Set main variables
 ```
 filepath = 'data/google-10000-english.txt'
 word = 'test'
 ```
-<br>
 3. Find anagrams
 
-<br>
 Cached anagrams:    
 anagram_words = an.anagrammer(filepath, word)
 print('Anagrams for', word ,'is:', ', '.join(anagram_words))
