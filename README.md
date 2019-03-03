@@ -72,30 +72,30 @@ duration,list,of,anagrams,found
 ## Usage by import
 
 1. Import reference to anagrammer
-```
+```Python
 import anagrammer as an
 ```
 2. Set main variables
-```
+```Python
 filepath = 'data/google-10000-english.txt'
 word = 'test'
 ```
 3. Find anagrams
 
   - Cached anagrams:    
-```
+```Python
 anagram_words = an.anagrammer(filepath, word)
 print('Anagrams for', word ,'is:', ', '.join(anagram_words))
 ```
   - Not cached anagrams:    
-```
+```Python
 contents = an.read_dictionary_file(filepath)
 dict_encoded_anagram = an.encode_anagrams(contents)
 anagram_words = an.find_anacrams(word, dict_encoded_anagram)
 print('Anagrams for', word ,'is:', ', '.join(anagram_words))
 ```
   - Not cached inversed dictionary anagrams:    
-```
+```Python
 contents = an.read_dictionary_file(filepath)
 dict_encoded_anagram = an.encode_anagrams_inverted(contents)
 anagram_words = an.find_anacrams_inverted(word, dict_encoded_anagram)
