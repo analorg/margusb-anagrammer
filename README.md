@@ -2,9 +2,9 @@
 
 Multi-word anagram solver
 
-## Installing Prerequisites
+## Install Prerequisites
 
-### linux (Ubuntu 14.04)
+### Linux (Ubuntu 14.04)
 
 You need to have:
  - python3 
@@ -33,26 +33,26 @@ Check Wget version:
 ```
 $ wget --version
 ```
-<br>
 
-## Download latest Anagrammer build
+# Download Latest Anagrammer Build
 ```
 $ git clone https://github.com/margusb/anagrammer.git
 ```
 <br>
 
-## Make script executable
+## Make Script Executable
 ```
 $ cd anagrammer/
 $ chmod a+x anagrammer.py
 ```
 <br>
 
-## Download Datasets
+# Download Datasets
 ```
 $ wget -P data https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english.txt 
 ```
-<br>
+
+# Usage
 
 ## Usage by shell
 ```
@@ -101,4 +101,13 @@ dict_encoded_anagram = an.encode_anagrams_inverted(contents)
 anagram_words = an.find_anacrams_inverted(word, dict_encoded_anagram)
 print('Anagrams for', word ,'is:', ', '.join(anagram_words))
 ```
+
+# Cleanup and Reset
+
+## Remove old cache and data
+```
+$ rm -r data/*
+$ rm -r cache/*
+```
+
 
